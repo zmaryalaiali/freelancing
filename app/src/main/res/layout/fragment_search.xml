@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFragment">
+    <SearchView
+        android:id="@+id/sv_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint=""
+       />
+    <TextView
+        android:id="@+id/tv_category_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:layout_below="@+id/sv_category"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_category_main"
+        android:layout_margin="10dp"
+        />
+
+</RelativeLayout>

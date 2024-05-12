@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_marginStart="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/recent_iv"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/busone"
+        />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/ic_account_circle"
+        android:layout_below="@+id/recent_iv"
+        />
+
+    <ImageView
+        android:id="@+id/iv_on_off"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="-6dp"
+        android:src="@drawable/user_online"
+        android:layout_alignEnd="@+id/iv_logo"
+        android:layout_below="@+id/iv_logo"/>
+
+    <ImageView
+        android:id="@+id/iv_favorite"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/recent_iv"
+        android:layout_alignRight="@+id/recent_iv"
+        android:layout_margin="12dp"
+        android:src="@drawable/favorite"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recent_iv"
+        android:gravity="start"
+        android:layout_marginLeft="100dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_seller_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="name"
+            />
+
+        <TextView
+            android:id="@+id/tv_seller_levell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="level"
+            android:textSize="24sp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_main_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_on_off"
+        android:text="Main text"
+        android:layout_margin="12dp"
+        android:textSize="30sp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_main_text"
+        android:layout_margin="12dp"
+        android:layout_alignParentLeft="true"
+        >
+        <ImageView
+            android:id="@+id/iv_rate"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/star"
+            />
+
+        <TextView
+            android:id="@+id/tv_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.4"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="12dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_number_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(43244)"
+            android:layout_marginLeft="12dp"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_below="@+id/tv_main_text"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        >
+        <TextView
+            android:id="@+id/tv_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="from"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$678"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="12dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

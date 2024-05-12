@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/profile"
+        android:background="@color/primary_light"
+        android:layout_height="200dp">
+        <ImageView
+            android:id="@+id/userAccoutProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginLeft="36dp"
+            android:src="@drawable/ic_account_circle"
+            />
+        <ImageView
+            android:id="@+id/updateProfileFicture"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="65dp"
+            android:src="@drawable/user_online"
+            />
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="najib ullah"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_toRightOf="@id/userAccoutProfile"
+            android:layout_marginTop="60dp"/>
+        <TextView
+            android:id="@+id/personalBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Balance: 100$"
+            android:textSize="18sp"
+            android:layout_below="@id/username"
+            android:layout_marginLeft="135dp"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:id="@+id/notification"
+            android:layout_height="40dp"
+            android:src="@drawable/bell"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/myworkCategorie"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:textSize="24sp"
+                android:text="My Mahir"
+                android:textStyle="bold"
+                android:layout_marginLeft="12dp"
+                />
+            <RelativeLayout
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:id="@+id/relative1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/favorite"
+                    android:id="@+id/ivFavirate"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saved List"
+                    android:layout_toEndOf="@id/ivFavirate"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/right_arrow"
+                    android:layout_alignParentEnd="true"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:id="@+id/relative2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/interest"
+                    android:id="@+id/ivmyinteraste"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Interaste"
+                    android:layout_toEndOf="@id/ivmyinteraste"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/right_arrow"
+                    android:layout_alignParentEnd="true"
+                    />
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/GenralkCategorie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="General"
+                android:textStyle="bold"
+                android:layout_marginLeft="12dp"
+                />
+            <RelativeLayout
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:id="@+id/relative3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/settings"
+                    android:id="@+id/ivsettings"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Interaste"
+                    android:layout_toEndOf="@id/ivsettings"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/right_arrow"
+                    android:layout_alignParentEnd="true"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:id="@+id/relative4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/onlinestate"
+                    android:id="@+id/ivshowOnlineStatus"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show Online Status"
+                    android:layout_toEndOf="@id/ivshowOnlineStatus"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"/>
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:id="@+id/relative5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/payment"
+                    android:id="@+id/ivpayment"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment"
+                    android:layout_toEndOf="@id/ivpayment"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/right_arrow"
+                    android:layout_alignParentEnd="true"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:id="@+id/relative6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/invite"
+                    android:id="@+id/ivinviteFriends"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Invite Friends"
+                    android:layout_toEndOf="@id/ivinviteFriends"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/right_arrow"
+                    android:layout_alignParentEnd="true"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:id="@+id/relative7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/becomaseller"
+                    android:id="@+id/ivBecomeSeller"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Become a Seller"
+                    android:layout_toEndOf="@id/ivBecomeSeller"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/right_arrow"
+                    android:layout_alignParentEnd="true"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:id="@+id/relative8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/support"
+                    android:id="@+id/ivsupport"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Support"
+                    android:layout_toEndOf="@id/ivsupport"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/right_arrow"
+                    android:layout_alignParentEnd="true"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
