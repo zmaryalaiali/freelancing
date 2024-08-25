@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".auth.SignupActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -11,15 +12,14 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="12dp"
-        android:background="@drawable/baseline_account_circle_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@drawable/maher_logo"
+        android:layout_gravity="center"
+       />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editTextUserName"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
@@ -28,25 +28,43 @@
         app:layout_constraintTop_toBottomOf="@+id/circleImageView">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Public User Name"
+            android:hint="Name"
+            android:textAlignment="center"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextUserLastName"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUserName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
             android:textAlignment="center"
             android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_gravity="center"        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextUserName">
+        app:layout_constraintTop_toBottomOf="@+id/editTextUserLastName">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
             android:textAlignment="center"
@@ -55,8 +73,8 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_gravity="center"        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +82,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
             android:textAlignment="center"
@@ -73,15 +91,15 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editTextConforme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_gravity="center"        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Conform Password"
             android:textAlignment="center"
@@ -97,6 +115,7 @@
         android:layout_marginEnd="162dp"
         android:backgroundTint="#3CE100"
         android:text="SignUp"
+        android:layout_gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextConforme" />
@@ -115,7 +134,8 @@
             android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="   By joining, you agree to Freelancer's " />
+            android:layout_marginStart="12dp"
+            android:text="By joining, you agree to Maher's " />
 
         <TextView
             android:id="@+id/TermOfServices"
@@ -127,4 +147,4 @@
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

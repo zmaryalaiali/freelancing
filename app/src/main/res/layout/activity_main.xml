@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
   <FrameLayout
-      android:id="@+id/frameLayout"
+      android:id="@+id/frameLayout_home"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
     android:layout_above="@+id/bottomneviggation"/>
@@ -15,6 +15,7 @@
   <com.google.android.material.bottomnavigation.BottomNavigationView
       android:id="@+id/bottomneviggation"
       android:layout_width="match_parent"
+      android:background="@color/white"
       android:layout_height="wrap_content"
       android:layout_alignParentBottom="true"
       app:menu="@menu/menu"/>

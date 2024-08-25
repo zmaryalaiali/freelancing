@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SubmitProposalActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="25dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Cover Letter"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="25dp">
+
+                <EditText
+                    android:id="@+id/et_submit_coverLetter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="write your cover Letter here"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="6dp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/btn_submit_proposal_attachFile"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Attach files"
+                android:textColor="@color/black"
+                android:layout_marginLeft="12dp"
+                android:padding="4dp"
+                android:background="@drawable/buttonsbackground"
+                android:drawableLeft="@drawable/attachfile"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="12dp"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit Proposal"
+                    android:onClick="submit"
+                    android:background="@drawable/buttonsbackground"
+                    android:layout_marginRight="40dp"
+
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:onClick="cancel"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/primary_dark"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/iv_submit_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/busone"/>
+
+</LinearLayout>

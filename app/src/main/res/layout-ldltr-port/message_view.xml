@@ -3,27 +3,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:ignore="MissingDefaultResource">
 
-    <TextView
-        android:id="@+id/user_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="kdjifjdksjfk"
-        android:textAlignment="textStart"
-        android:layout_marginEnd="150dp"
-        android:visibility="visible"
-        />
+   <androidx.cardview.widget.CardView
+       android:id="@+id/card_user"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:backgroundTint="@color/primary_main"
+       android:layout_marginEnd="100dp"
+       app:cardCornerRadius="20sp"
+       android:layout_marginTop="10dp"
+       >
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           >
+           <TextView
+               android:id="@+id/user_text"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textSize="25sp"
+               android:text="User Text"
+               android:textAlignment="textStart"
+               android:padding="5dp"
+               android:layout_marginStart="15dp"
+               android:visibility="visible"
+               />
 
-    <TextView
-        android:id="@+id/server_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="kdjifjdksjfk"
-        android:textAlignment="textEnd"
-        android:layout_marginStart="150dp"
-        />
+           <TextView
+               android:id="@+id/user_date"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="454467890iuh5d"
+               android:textSize="18sp"
+               android:layout_alignEnd="@+id/user_text"
+               android:layout_below="@+id/user_text"
+               android:textAlignment="textEnd"/>
+
+       </RelativeLayout>
+   </androidx.cardview.widget.CardView>
+   <androidx.cardview.widget.CardView
+       android:id="@+id/card_server"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:backgroundTint="@color/primary"
+       android:layout_marginStart="100dp"
+       app:cardCornerRadius="20sp"
+       android:layout_marginTop="10dp"
+       >
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <TextView
+               android:id="@+id/server_text"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textSize="25sp"
+               android:padding="5dp"
+               android:text="SerVerText"
+               />
+           <TextView
+               android:id="@+id/server_date"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="454467890iuh5d"
+               android:textSize="18sp"
+               android:layout_alignEnd="@+id/server_text"
+               android:layout_below="@+id/server_text"
+               android:layout_marginEnd="20sp"
+               android:textAlignment="textEnd"/>
+       </RelativeLayout>
+   </androidx.cardview.widget.CardView>
 </LinearLayout>

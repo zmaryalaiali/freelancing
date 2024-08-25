@@ -9,6 +9,12 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import net.dkr.freelancing.fragments.HomeFragment;
+import net.dkr.freelancing.fragments.ManageOrderFragment;
+import net.dkr.freelancing.fragments.MessageFragment;
+import net.dkr.freelancing.fragments.ProfileFragment;
+import net.dkr.freelancing.fragments.SearchFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
@@ -19,10 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomneviggation);
 
-        getSupportFragmentManager().beginTransaction().add(new HomeFragment(),"HomeFragment").commit();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,new HomeFragment()).commit();
-
-
+        getSupportFragmentManager().beginTransaction().add(new HomeFragment(),"HomeFragment").replace(R.id.frameLayout_home,new HomeFragment()).commit();
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -42,8 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                         fragment = new HomeFragment();
-
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,fragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout_home,fragment).commit();
                 return true;
             }
         });

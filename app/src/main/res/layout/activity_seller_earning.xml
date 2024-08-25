@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="8dp"
+    android:background="@color/white"
+    tools:context=".Seller_Earning_Activity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="12dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:id="@+id/toolbar_Earnings"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/relative_personal_balance"
+        android:layout_below="@id/toolbar_Earnings"
+        android:layout_height="170dp">
+        <TextView
+            android:id="@+id/tv_personal_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0"
+            android:textSize="24sp"
+            android:textColor="@color/primary_main"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"/>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Balance"
+            android:textSize="24sp"
+            android:layout_below="@id/tv_personal_balance"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/tv_analytics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="analytics"
+            android:layout_marginBottom="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="8dp"
+            android:textSize="24sp"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_marginLeft="8dp"
+        android:layout_below="@id/relative_personal_balance"
+        android:layout_marginBottom="8dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/relative_Earnings_in_May"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/relative_personal_balance"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Earnings in May"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="$0"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentEnd="true"
+            />
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/relative_avg_selling_price"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/relative_Earnings_in_May"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evg. Selling price"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="$0"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/relative_active_orders"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/relative_avg_selling_price"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Active Order"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="0($0)"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentEnd="true"
+            />
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/relative_availabale_for_withdraw"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/relative_active_orders"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available for withdrawal"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="$0"
+            android:textColor="@color/black"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentEnd="true"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/relative_completed_orders"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/relative_availabale_for_withdraw"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completed Orders"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="0($0)"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/view2"
+        android:background="@color/black"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/relative_completed_orders"
+        android:layout_marginBottom="8dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view2"
+        android:text="Revenues"
+        android:textSize="24sp"
+        android:id="@+id/tv_revenues"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/view3"
+        android:background="@color/black"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/tv_revenues"
+        android:layout_marginBottom="8dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/view3"
+        android:id="@+id/relative_payment_being_cleared"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="payment Being cleard"
+            android:textSize="18sp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0"
+                android:textSize="18sp"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/tv_pbt_price"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right_arrow"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="8dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/view4"
+        android:background="@color/black"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/relative_payment_being_cleared"
+        android:layout_marginBottom="8dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/view4"
+        android:id="@+id/relative_Earnings_to_date"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Earnings To Date"
+            android:textSize="18sp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0"
+                android:textSize="18sp"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/tv_etd_price"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right_arrow"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/view5"
+        android:background="@color/black"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/relative_Earnings_to_date"
+        android:layout_marginBottom="8dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/view5"
+        android:id="@+id/relative_expance_to_date"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expance to Date"
+            android:textSize="18sp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0"
+                android:textSize="18sp"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/tv_expancetd_price"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right_arrow"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="8dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/view6"
+        android:background="@color/black"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/relative_expance_to_date"
+        android:layout_marginBottom="8dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/view6"
+        android:id="@+id/relative_withdrawan_to_date"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="withdrawan to Date"
+            android:textSize="18sp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0"
+                android:textSize="18sp"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/tv_wtd_price"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right_arrow"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="8dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

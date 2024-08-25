@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".GigDetailesActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/rv_gig_seller_slider"
+             android:layout_width="match_parent"
+             android:layout_height="250dp"
+             tools:listitem="@layout/view_slider"
+             />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_gig_seller_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="12dp"
+                android:layout_below="@id/rv_gig_seller_slider"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/profiletwo"
+                />
+            <TextView
+                android:id="@+id/tv_gig_seller_goMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_gig_seller_slider"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="12dp"
+                android:textColor="@color/primary_main"
+                android:text="Contacts"/>
+            <TextView
+                android:id="@+id/tv_gig_seller_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="afghan"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@id/iv_gig_seller_image"
+                android:layout_below="@id/rv_gig_seller_slider"
+                android:layout_marginStart="12dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_gig_seller_gig_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="design a minimalist, Modern Logo"
+                android:layout_marginTop="18dp"
+                android:layout_below="@id/iv_gig_seller_image"
+                android:layout_marginStart="12dp"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_gig_seller_gig_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First class logo design with a minimalist approch first class logo design with a minimalist approch"
+                android:layout_marginTop="18dp"
+                android:layout_below="@id/tv_gig_seller_gig_name"
+                android:layout_marginStart="12dp"
+                android:textSize="18sp"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_gig_seller_gig_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First class lo approch first class logo design with a minimalist approch"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/tv_gig_seller_gig_description"
+                android:layout_marginStart="12dp"
+                android:textSize="18sp"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_gig_seller_gig_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$1290"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_below="@+id/tv_gig_seller_gig_summary"/>
+
+
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_gig_seller_gig_type"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="PREMUM PACKAGE"-->
+<!--                android:layout_marginTop="18dp"-->
+<!--                android:layout_below="@id/tv_gig_seller_gig_price"-->
+<!--                android:layout_marginStart="12dp"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textColor="@color/black"-->
+<!--                />-->
+            <TextView
+                android:id="@+id/tv_gig_seller_gig_type_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First class logo design with a minimalist"
+                android:layout_marginTop="18dp"
+                android:layout_below="@id/tv_gig_seller_gig_price"
+                android:layout_marginStart="12dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_gig_seller_gig_component"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_gig_seller_gig_type_description"
+                android:layout_marginTop="8dp"
+                tools:listitem="@layout/view_gig_details_components" />
+
+
+            <Button
+                android:id="@+id/btn_gig_seller_gig_continue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="countinueOrder"
+                android:layout_margin="12dp"
+                android:layout_below="@+id/rv_gig_seller_gig_component"
+                android:backgroundTint="@color/primary_dark"
+                android:text="continue"/>
+
+
+            <TextView
+                android:id="@+id/tv_gig_seller_gig_faqs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:textStyle="bold"
+                android:text="Frequently Ask Questions"
+                android:layout_below="@+id/btn_gig_seller_gig_continue"
+                android:textSize="20sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_gig_seller_gig_faqs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/tv_gig_seller_gig_faqs"
+                android:layout_marginTop="8dp"
+                tools:listitem="@layout/view_faqs_item" />
+            <TextView
+                android:id="@+id/tv_gig_seller_gig_recommendText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:textStyle="bold"
+                android:text="Related for you"
+                android:layout_below="@+id/rv_gig_seller_gig_faqs"
+                android:textSize="20sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_gig_seller_gig_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_gig_seller_gig_recommendText"
+                android:layout_marginTop="8dp"
+                tools:listitem="@layout/inspired_view" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

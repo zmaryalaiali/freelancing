@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".JobDetailesActivity">
+
+
+    <TextView
+        android:id="@+id/tv_job_detailes_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="how can design a professional business card design for me?"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_margin="6dp"
+        />
+    <TextView
+        android:id="@+id/tv_job_detailes_posted_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="posted 7 hours ago"
+        android:layout_marginLeft="6dp"
+        />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/ivofdesc"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/bell"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/ivofdesc"
+                android:text="@string/text"
+                android:layout_margin="4dp"
+                />
+        </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        />
+    <TextView
+        android:id="@+id/tv_job_detailes_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Im looking for an eBook to be written. approximately 1000 words on AI and complete guide to chatGPT everything AI and a comprehensive guide to ..."
+        android:layout_margin="6dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        >
+        <ImageView
+            android:id="@+id/iv12"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/payment"
+            android:layout_marginLeft="12dp"
+            />
+        <TextView
+            android:id="@+id/tv_job_detailes_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$100.000"
+            android:layout_toEndOf="@id/iv12"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fixed-Price"
+            android:layout_below="@id/tv_job_detailes_price"
+            android:layout_marginLeft="45dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/iv13"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/payment"
+            android:layout_marginLeft="12dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_job_detailes_expert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/iv13"
+            android:text="Expert"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Experience Level"
+            android:layout_below="@id/tv_job_detailes_expert"
+            android:layout_marginLeft="45dp"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        />
+
+
+    <Button
+        android:id="@+id/btn_applay_to_job"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary_dark"
+        android:text="Applay Now"/>
+
+
+
+
+
+
+</LinearLayout>

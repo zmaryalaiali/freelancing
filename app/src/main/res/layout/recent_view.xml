@@ -1,138 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="300dp"
-    android:layout_marginStart="10dp"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/recent_iv"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:src="@drawable/busone"
-        />
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardCornerRadius="15dp"
+      android:elevation="12dp"
+      android:outlineSpotShadowColor="@color/black"
+      >
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/iv_logo"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:src="@drawable/ic_account_circle"
-        android:layout_below="@+id/recent_iv"
-        />
-
-    <ImageView
-        android:id="@+id/iv_on_off"
-        android:layout_width="12dp"
-        android:layout_height="12dp"
-        android:layout_marginTop="-6dp"
-        android:src="@drawable/user_online"
-        android:layout_alignEnd="@+id/iv_logo"
-        android:layout_below="@+id/iv_logo"/>
-
-    <ImageView
-        android:id="@+id/iv_favorite"
-        android:layout_width="48dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/recent_iv"
-        android:layout_alignRight="@+id/recent_iv"
-        android:layout_margin="12dp"
-        android:src="@drawable/favorite"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/recent_iv"
-        android:gravity="start"
-        android:layout_marginLeft="100dp"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:id="@+id/tv_seller_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:text="name"
-            />
-
-        <TextView
-            android:id="@+id/tv_seller_levell"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="level"
-            android:textSize="24sp"
-            />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tv_main_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/iv_on_off"
-        android:text="Main text"
-        android:layout_margin="12dp"
-        android:textSize="30sp"
-        />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_main_text"
-        android:layout_margin="12dp"
-        android:layout_alignParentLeft="true"
-        >
-        <ImageView
-            android:id="@+id/iv_rate"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:src="@drawable/star"
-            />
-
-        <TextView
-            android:id="@+id/tv_rate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4.4"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginLeft="12dp"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:id="@+id/tv_number_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="(43244)"
-            android:layout_marginLeft="12dp"
-            android:textSize="18sp"/>
-    </LinearLayout>
+          <ImageView
+              android:id="@+id/recent_iv"
+              android:layout_width="match_parent"
+              android:layout_height="250dp"
+              android:scaleType="centerCrop"
+              android:src="@drawable/busone" />
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       android:layout_below="@+id/tv_main_text"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="12dp"
-        >
-        <TextView
-            android:id="@+id/tv_from"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="from"
-            android:textSize="18sp"/>
+          <ImageView
+              android:id="@+id/iv_favorite"
+              android:layout_width="48dp"
+              android:layout_height="40dp"
+              android:layout_below="@+id/recent_iv"
 
-        <TextView
-            android:id="@+id/tv_money"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$678"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="12dp"/>
-    </LinearLayout>
+              android:layout_alignRight="@+id/recent_iv"
+              android:layout_marginStart="12dp"
+              android:layout_marginTop="12dp"
+              android:layout_marginBottom="12dp"
+              android:src="@drawable/heart" />
+
+          <LinearLayout
+              android:id="@+id/linearLayout1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/recent_iv"
+              android:gravity="start"
+              android:paddingLeft="12dp"
+              android:layout_toLeftOf="@id/iv_favorite"
+              android:orientation="vertical"
+              >
+              <TextView
+                  android:id="@+id/tv_seller_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="22sp"
+                  android:textStyle="bold"
+                  android:text="name"
+                  />
+
+              <TextView
+                  android:id="@+id/tv_seller_levell"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="level"
+                  android:textSize="20sp"
+                  />
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/tv_main_text"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/linearLayout1"
+              android:layout_marginStart="6dp"
+              android:layout_marginTop="12dp"
+              android:maxLines="2"
+              android:layout_marginEnd="6dp"
+              android:layout_marginBottom="6dp"
+              android:text="Main text"
+              android:textSize="20sp" />
+
+          <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/tv_main_text"
+              android:layout_margin="12dp"
+              android:paddingBottom="4dp"
+              android:layout_alignParentLeft="true"
+              >
+              <ImageView
+                  android:id="@+id/iv_rate"
+                  android:layout_width="26dp"
+                  android:layout_height="26dp"
+                  android:src="@drawable/star"
+                  />
+
+              <TextView
+                  android:id="@+id/tv_rate"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="4.4"
+                  android:textStyle="bold"
+                  android:layout_toEndOf="@+id/iv_rate"
+                  android:textColor="@color/black"
+                  android:layout_marginLeft="12dp"
+                  android:textSize="18sp"/>
+
+              <TextView
+                  android:id="@+id/tv_number_user"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="(43244)"
+                  android:layout_toEndOf="@+id/tv_rate"
+                  android:layout_marginLeft="12dp"
+                  android:textSize="18sp"/>
+
+              <TextView
+                  android:id="@+id/tv_from"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="from"
+                  android:layout_toStartOf="@+id/tv_money"
+                  android:textAlignment="textEnd"
+                  android:layout_marginStart="18dp"
+                  android:paddingBottom="3dp"
+                  android:textSize="18sp"/>
+
+              <TextView
+                  android:id="@+id/tv_money"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="$678"
+                  android:layout_alignParentEnd="true"
+                  android:textSize="20sp"
+                  android:textStyle="bold"
+                  android:layout_marginLeft="12dp"/>
+          </RelativeLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="5dp"
+              android:layout_alignParentBottom="true"
+              android:background="@color/primary_main"/>
+      </RelativeLayout>
+  </androidx.cardview.widget.CardView>
+
+
 
 
 </RelativeLayout>

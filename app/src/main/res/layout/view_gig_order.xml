@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="110dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:elevation="8dp"
+        app:cardCornerRadius="15dp"
+        android:padding="15dp"
+        android:layout_margin="3dp"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/RL_image"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_gig_order_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="12dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/busone" />
+
+
+            <TextView
+                android:id="@+id/tv_gig_order_userName"
+                android:layout_width="wrap_content"
+                android:layout_toEndOf="@id/iv_gig_order_image"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_height="wrap_content"
+                android:text="Afghan" />
+
+            <TextView
+                android:id="@+id/tv_gig_order_gigDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="this my gigs and also im an android developer"
+               android:maxLines="2"
+                android:layout_toEndOf="@+id/iv_gig_order_image"
+                android:layout_below="@id/iv_gig_order_image"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="12dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_gig_order_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="aug 20"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_gig_order_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(19$)"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginRight="12dp"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

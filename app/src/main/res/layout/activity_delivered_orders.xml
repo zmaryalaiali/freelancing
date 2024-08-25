@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DeliveredOrdersActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        android:layout_margin="12dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order Details"
+                android:id="@+id/tv_title"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:textSize="22sp"/>
+
+            <ImageView
+                android:id="@+id/iv_order_image_buyer"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="6dp"
+                android:layout_below="@id/tv_title"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cardone" />
+
+            <TextView
+                android:id="@+id/tv_order_tital_buyer"
+                android:layout_toEndOf="@id/iv_order_image_buyer"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="100dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="12dp"
+                android:layout_height="wrap_content"
+                android:text="Logo Design" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout_buyer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_below="@id/iv_order_image_buyer">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ordered From" />
+
+                <TextView
+                    android:id="@+id/tv_order_detail_buyer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Zmaryalai ali" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout_DelaveryTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_below="@id/linearLayout_buyer">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Delavery date" />
+
+                <TextView
+                    android:id="@+id/tv_order_deleaveryTime_buyer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2024.june.2" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_below="@id/linearLayout_DelaveryTime">
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Price" />
+
+                <TextView
+                    android:id="@+id/tv_order_detail_price_buyer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="$12" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout_byerId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_below="@id/linearLayout_price">
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ordered number" />
+
+                <TextView
+                    android:id="@+id/tv_order_detail_orderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="144f654466433fddrr55" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_show_conversationWithSeller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   Recent Conversation"
+        android:layout_margin="12dp"
+        android:textSize="18sp"
+        android:background="@drawable/editetextstyle"
+        android:textColor="@color/primary_main"
+        android:padding="8dp"
+        android:drawableLeft="@drawable/messageing"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attachments"
+        android:textSize="18sp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <ImageView
+        android:id="@+id/iv_deliver_order_attach_files"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/attachfile"
+        android:layout_margin="12dp"
+        android:background="@drawable/editetextstyle"
+        />
+
+    <Button
+        android:id="@+id/btn_thanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thanks"
+        />
+
+</LinearLayout>

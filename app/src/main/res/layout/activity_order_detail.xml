@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderDetailActivity">
+
+    <TextView
+        android:id="@+id/order_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detailes of the Order"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_of_the_order"
+                android:layout_width="match_parent"
+                app:cardCornerRadius="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="28dp"
+                android:outlineSpotShadowColor="@color/black"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/order_detail_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cardone"
+                        />
+                    <TextView
+                        android:id="@+id/order_detail_tital"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/black"
+                        android:text="I well design a brange Logo"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:layout_below="@id/order_detail_image"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/order_detail_tital"
+                        android:background="@color/black"/>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_DelaveryTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="6dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_below="@id/linearLayout_buyer">
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Delavery Time" />
+
+                        <TextView
+                            android:id="@+id/tv_order_deleaveryTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="2024.june.2" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linearLayout_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="6dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_below="@id/linearLayout_DelaveryTime">
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Price" />
+
+                        <TextView
+                            android:id="@+id/tv_order_detail_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="$12" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linearLayout_buyer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="6dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_below="@id/order_detail_tital">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Ordered From" />
+
+                        <TextView
+                            android:id="@+id/tv_order_detail_delivered_buyerName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Najib ullah Momand" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linearLayout_byerId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="6dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_below="@id/linearLayout_price">
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Ordered Number" />
+
+                        <TextView
+                            android:id="@+id/tv_order_detail_buyerId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="144f654466433fddrr55" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_deliver_time_remaind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linearLayout_byerId"
+                        android:text="1:12:40:10"
+                        android:textColor="@color/primary_main"
+                        android:textSize="30sp"
+                        android:layout_margin="18dp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deliver Time is Remind"
+                        android:layout_marginTop="28dp"
+                        android:textColor="@color/primary_main"
+                        android:layout_below="@id/linearLayout_byerId"
+                        android:layout_toRightOf="@id/tv_deliver_time_remaind"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/tv_start_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="START ORDER"
+                android:layout_below="@+id/card_of_the_order"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/primary_main"/>
+
+            <TextView
+                android:id="@+id/tv_start_order_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="@string/text"
+                android:padding="3dp"
+                android:layout_below="@id/tv_start_order"
+                android:textColor="@color/black"/>
+
+
+            <TextView
+                android:id="@+id/tv_conversation_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RECENT CONVERSATION"
+                android:layout_below="@+id/tv_start_order_details"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/primary_main"/>
+
+            <TextView
+                android:id="@+id/tv_start_conversation_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="@string/text"
+                android:padding="3dp"
+                android:layout_below="@id/tv_conversation_start"
+                android:textColor="@color/black"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_message_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp"
+                android:layout_below="@id/tv_start_conversation_details">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView118"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:padding="6dp"
+                        android:text="quick Message to Najib Ullah Momand" />
+
+                    <EditText
+                        android:id="@+id/editTextTextMultiLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:hint="type here your Massage"
+                        android:layout_below="@id/textView118"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine"
+                        android:maxLines="4"
+                        android:padding="6dp" />
+
+                    <Button
+                        android:id="@+id/btn_sentMessage_toBuyer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_below="@id/editTextTextMultiLine"
+                        android:text="Send Massage" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <Button
+                android:id="@+id/btn_deliver_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deliver Order"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/card_message_order"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

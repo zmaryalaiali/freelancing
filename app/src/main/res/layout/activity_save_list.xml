@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".SaveListActivity">
+    <TextView
+        android:id="@+id/tv_My_saved_gig_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Saved Gigs"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/view1"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/tv_My_saved_gig_list"
+        android:background="@color/black"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_Save_gig_list"
+        android:layout_width="match_parent"
+        android:layout_margin="12dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view1"
+        tools:listitem="@layout/gig_design_view"/>
+
+</RelativeLayout>

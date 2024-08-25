@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".SettingsActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                android:elevation="12dp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:id="@+id/toolbar"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"/>
+
+
+        <TextView
+            android:id="@+id/tv_notification"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="Notifications"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@id/tv_notification"/>
+
+        <TextView
+            android:id="@+id/tv_notification_sound"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/settings_tv_design"
+            android:layout_below="@id/tv_notification"
+            android:text="Notifications Sounds"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_below="@id/tv_notification_sound"/>
+
+
+        <TextView
+            android:id="@+id/tv_termOfService"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="8dp"
+            android:layout_height="36dp"
+            android:text="Terms of Services"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:background="@color/black"
+            android:layout_below="@id/tv_termOfService"/>
+
+        <TextView
+            android:id="@+id/tv_privacy_policy"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="8dp"
+            android:layout_height="36dp"
+            android:layout_below="@id/tv_termOfService"
+            android:text="Privacy and policy"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:background="@color/black"
+            android:layout_below="@id/tv_privacy_policy"/>
+
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="8dp"
+            android:text="Logout"
+            android:onClick="logout"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:background="@color/black"
+            android:layout_below="@id/tv_logout"/>
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:layout_below="@id/tv_logout"
+            android:text="version 3.6.5.3"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+
+
+</LinearLayout>

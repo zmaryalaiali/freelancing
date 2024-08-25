@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CreateProfileActivity">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_margin="6dp"
+        android:textColor="@color/primary_main"
+        android:textStyle="bold"
+        android:text="Complete and Publish Your Profile" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:text="a professional photo helps you build trust with your clients. to keep things safe and simple."
+        android:layout_marginLeft="6dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_create_profile"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_account_circle"/>
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="Country *" />
+
+    <EditText
+        android:id="@+id/et_create_profile_country"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+         />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="300dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="City *" />
+
+    <EditText
+        android:id="@+id/et_create_profile_city"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="Post Code *" />
+
+    <EditText
+        android:id="@+id/et_create_profile_post_code"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        />
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Phone Number"
+        />
+
+
+    <EditText
+        android:id="@+id/et_create_profile_number"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Number"
+        android:inputType="number"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_create_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="-1dp"
+            android:backgroundTint="@color/primary_dark"
+            android:text="Next" />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

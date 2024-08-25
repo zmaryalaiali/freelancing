@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Active" android:id="@+id/menu_seller_manageOrder_active"/>
+    <item android:title="Complete" android:id="@+id/menu_seller_manageOrder_complete"/>
+    <item android:title="Cancel" android:id="@+id/menu_seller_manageOrder_cancel"/>
+</menu>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SearchSubCategoryFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_search_subCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/iv_subCategory_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/arrow_back"/>
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/et_subCategory_search_text"
+             android:layout_width="match_parent"
+             android:layout_marginRight="12dp"
+             android:layout_height="wrap_content"
+             android:layout_alignParentEnd="true"
+             android:layout_toEndOf="@+id/iv_subCategory_back"
+             >
+             <com.google.android.material.textfield.TextInputEditText
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:hint="Search SubCategory"
+                 android:drawableLeft="@drawable/search"
+                 />
+         </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:id="@+id/iv_search_subCategory_image"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:src="@drawable/busone"
+                android:layout_below="@+id/et_subCategory_search_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                />
+            <TextView
+                android:id="@+id/iv_search_subCategory_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_below="@+id/iv_search_subCategory_image"
+                android:layout_centerHorizontal="true"
+                android:text="Graphics Design"/>
+
+            <TextView
+                android:id="@+id/iv_search_subCategory_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_search_subCategory_title"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:text="a single place, milions of creative talents"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:layout_marginTop="3dp"
+                android:layout_below="@id/iv_search_subCategory_desc"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_search_subCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/view_search_sub_category_item"
+        android:layout_below="@+id/toolbar_search_subCategory"
+        android:layout_marginTop="5dp"/>
+
+
+</RelativeLayout>

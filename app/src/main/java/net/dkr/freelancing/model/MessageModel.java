@@ -7,9 +7,12 @@ public class MessageModel {
     private String message;
     private String sentBy;
 
-    public MessageModel(String message, String sentBy) {
+    private String date;
+
+    public MessageModel(String message, String sentBy, String date) {
         this.message = message;
         this.sentBy = sentBy;
+        this.date = date;
     }
 
     public String getMessage() {
@@ -18,5 +21,9 @@ public class MessageModel {
 
     public String getSentBy() {
         return sentBy;
+    }
+
+    public String getDate() {
+        return date;
     }
 }

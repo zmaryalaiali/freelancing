@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".JobActivity">
+    <TextView
+        android:id="@+id/tvJob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ALL Jobs"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_margin="12dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_buyer_job"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvJob"
+        tools:listitem="@layout/view_job_item"/>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/rv_buyer_job"
+            android:src="@drawable/baseline_add_24"
+            android:layout_marginTop="-50dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentEnd="true"
+           />
+
+</RelativeLayout>

@@ -6,17 +6,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputLayout;
 
 import net.dkr.freelancing.MainActivity;
+import net.dkr.freelancing.SellerMainActivity;
+import net.dkr.freelancing.model.LoginModel;
+import net.dkr.freelancing.util.AddCookieInterceptor;
+import net.dkr.freelancing.util.AllURL;
+import net.dkr.freelancing.ChosserActivity;
 import net.dkr.freelancing.R;
-import net.dkr.freelancing.RestApi;
+import net.dkr.freelancing.util.GetCookieInterceptor;
+import net.dkr.freelancing.util.RestApi;
+import net.dkr.freelancing.util.SharedText;
 
 import org.json.JSONObject;
 
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -29,11 +37,11 @@ public class LoginActivity extends AppCompatActivity {
     TextInputLayout etEmail,etPassword;
 
     RestApi restApi;
+    Retrofit retrofit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
         etEmail = findViewById(R.id.editTextEmailSignIn);
@@ -42,10 +50,23 @@ public class LoginActivity extends AppCompatActivity {
         btnSignup = findViewById(R.id.btnSignup);
 
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl(AllURL.BASE_URL)
-                .build();
+        OkHttpClient client = new OkHttpClient();
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient.Builder builder = new OkHttpClient.Builder();
+        builder.addInterceptor(new AddCookieInterceptor(this)); // VERY VERY IMPORTANT
+        builder.addInterceptor(new GetCookieInterceptor(this)); // VERY VERY IMPORTANT
+        builder.addInterceptor(logging);
+        client = builder.build();
+
+
+
+        retrofit = new Retrofit.Builder().
+                baseUrl(AllURL.BASE_URL).
+                addConverterFactory(GsonConverterFactory.create()).
+                client(client).
+                build();
+
 
         restApi = retrofit.create(RestApi.class);
 
@@ -63,19 +84,38 @@ public class LoginActivity extends AppCompatActivity {
                 String email,password;
                 email = etEmail.getEditText().getText().toString();
                 password = etPassword.getEditText().getText().toString();
+
                 if (email.isEmpty() || password.isEmpty()){
                     Toast.makeText(LoginActivity.this, "please provide all field", Toast.LENGTH_SHORT).show();
+                    etEmail.setError("please provide all field");
                 }
                 else {
-                    Call<JSONObject> call = restApi.loginUser(new LoginModel(email,password));
-                   call.enqueue(new Callback<JSONObject>() {
-                       @Override
-                       public void onResponse(Call<JSONObject> call, Response<JSONObject> response) {
-                           if (response.isSuccessful()){
+                    Call<SignUpResponse> call = restApi.loginUser(new LoginModel(email,password));
 
-                               Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                               startActivity(intent);
-                               Toast.makeText(LoginActivity.this, "login", Toast.LENGTH_SHORT).show();
+                    call.enqueue(new Callback<SignUpResponse>() {
+                       @Override
+                       public void onResponse(Call<SignUpResponse> call, Response<SignUpResponse> response) {
+                           if (response.isSuccessful()){
+                               SharedText sharedText = new SharedText(LoginActivity.this);
+                               sharedText.setUserId(response.body().getUser().getId());
+                               boolean isSeller = response.body().getUser().getSeller();
+                               if (isSeller) {
+                                   sharedText.setLog("log");
+                                   sharedText.setUserText(isSeller);
+                                   Intent i = new Intent(LoginActivity.this, SellerMainActivity.class);
+                                   i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                   startActivity(i);
+                                   finish();
+                               } else {
+                                   sharedText.setLog("log");
+                                   sharedText.setUserText(isSeller);
+                                   Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                                   i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                   startActivity(i);
+                                   finish();
+                               }
+
+
                            }
                            else {
                                Toast.makeText(LoginActivity.this, "not login", Toast.LENGTH_SHORT).show();
@@ -83,9 +123,10 @@ public class LoginActivity extends AppCompatActivity {
                        }
 
                        @Override
-                       public void onFailure(Call<JSONObject> call, Throwable throwable) {
+                       public void onFailure(Call<SignUpResponse> call, Throwable throwable) {
 
                            Toast.makeText(LoginActivity.this, "error "+throwable.getMessage(), Toast.LENGTH_SHORT).show();
+                           etEmail.setError("Error "+throwable.getMessage());
                        }
                    });
                 }

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SellerCreateProfileActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="6dp"
+                android:textSize="18sp"
+                android:textColor="@color/primary_main"
+                android:textStyle="bold"
+                android:text="Now add a title to tell the world what you do" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="it is the very first thing clients see ,so make it count . stand out  by describing your expertiesin your own words."
+                android:layout_marginLeft="6dp"/>
+
+            <EditText
+                android:id="@+id/et_create_profile_seller_"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginTop="12dp"
+                android:hint="Ex: android Mobile Designer"
+                android:inputType="text"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/primary_main"
+                android:textStyle="bold"
+                android:text="What are the main skills you have?" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="choose at least one skill that describes the type of work you do. this helps us match you whit clients who need you uniwue experties"
+                android:layout_marginLeft="6dp"/>
+
+            <EditText
+                android:id="@+id/et_create_profile_seller_skills"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginTop="12dp"
+                android:hint="UI design , branding"
+                android:inputType="text"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/primary_main"
+                android:textStyle="bold"
+                android:layout_margin="3dp"
+                android:text="Next, tell us which languages you speak" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="6dp"
+                android:text="Client are often intersted to know what languages you speak, English is must"
+                android:layout_marginLeft="6dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:background="@color/primary_main"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="12dp"
+                    android:text="Language" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Proficiency" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/view_language_proficiency" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD A LANGUAGE"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:drawableLeft="@drawable/add"
+                android:gravity="center"
+                android:textColor="@color/primary_main"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Education"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/primary_main"/>
+
+            <EditText
+                android:id="@+id/et_create_profile_seller_school"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="School *" />
+            <EditText
+                android:id="@+id/et_create_profile_seller_degree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Degree" />
+            <EditText
+                android:id="@+id/et_create_profile_seller_Field_of_study"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Field of Study" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date Attended"
+                android:layout_marginTop="40dp"
+                android:textColor="@color/primary_main"
+                android:gravity="center"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+
+                <EditText
+                    android:id="@+id/et_create_profile_seller_date_attended_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_weight="1"
+                    android:layout_marginRight="12dp"
+                    android:inputType="text"
+                    android:hint="From" />
+                <EditText
+                    android:id="@+id/et_create_profile_seller_date_attended_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:hint="To" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_main"
+                android:text="Add work experience"
+                android:textSize="18sp"
+                android:layout_marginTop="40dp"
+                android:gravity="center"/>
+            <EditText
+                android:id="@+id/et_create_profile_seller_work_experience_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:hint="Title *" />
+            <EditText
+            android:id="@+id/et_create_profile_seller_work_experience_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:hint="Company *" />
+            <EditText
+            android:id="@+id/et_create_profile_seller_work_experience_Location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:hint="Location *" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Start date *"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="End date *"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    android:id="@+id/et_create_profile_seller_work_start_months"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:hint="Month" />
+                <EditText
+                    android:id="@+id/et_create_profile_seller_work_start_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:hint="Year" />
+                <EditText
+                    android:id="@+id/et_create_profile_seller_work_end_months"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:hint="from" />
+                <EditText
+                    android:id="@+id/et_create_profile_seller_work_end_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:hint="To" />
+
+            </LinearLayout>
+
+
+
+
+
+            <Button
+                android:id="@+id/btn_create_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Now Create Profile"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

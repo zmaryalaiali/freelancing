@@ -1,42 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MessageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".fragments.MessageFragment">
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/messageRv"
+        android:id="@+id/rv_message_userList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:listitem="@layout/message_view" />
+        android:layout_height="match_parent"
+        tools:listitem="@layout/view_message_user_item" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etSent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="100dp"
-        android:padding="10dp"
-        android:layout_marginBottom="20dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Enter Message"
-            android:padding="10dp"
-            android:textSize="30sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <ImageView
-        android:id="@+id/btnSent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/etSent"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="40dp"
-        android:src="@drawable/send" />
 </RelativeLayout>

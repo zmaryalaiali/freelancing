@@ -10,8 +10,8 @@
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
         android:id="@+id/profile"
+        android:layout_width="match_parent"
         android:background="@color/primary_light"
         android:layout_height="200dp">
         <ImageView
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:text="najib ullah"
             android:textStyle="bold"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:layout_toRightOf="@id/userAccoutProfile"
             android:layout_marginTop="60dp"/>
         <TextView
@@ -50,13 +50,15 @@
             android:layout_marginLeft="135dp"
             />
         <ImageView
-            android:layout_width="40dp"
+            android:layout_width="25dp"
             android:id="@+id/notification"
-            android:layout_height="40dp"
+            android:layout_height="25dp"
             android:src="@drawable/bell"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="30dp"
             android:layout_marginRight="30dp"/>
+
+
 
     </RelativeLayout>
 
@@ -74,22 +76,24 @@
                 android:id="@+id/myworkCategorie"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:textSize="24sp"
+                android:textSize="20sp"
+                android:gravity=""
+                android:textColor="@color/primary_dark"
                 android:text="My Mahir"
                 android:textStyle="bold"
-                android:layout_marginLeft="12dp"
+                android:layout_marginLeft="18dp"
                 />
             <RelativeLayout
+                android:id="@+id/relative_save_list"
                 android:layout_marginTop="12dp"
                 android:layout_marginLeft="12dp"
-                android:id="@+id/relative1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/favorite"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/heart"
                     android:id="@+id/ivFavirate"
                     />
                 <TextView
@@ -98,7 +102,7 @@
                     android:text="Saved List"
                     android:layout_toEndOf="@id/ivFavirate"
                     android:layout_marginLeft="12dp"
-                    android:layout_centerVertical="true"
+
                     android:textStyle="bold"/>
 
                 <ImageView
@@ -117,18 +121,17 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/interest"
                     android:id="@+id/ivmyinteraste"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="My Interaste"
+                    android:text="Profile"
                     android:layout_toEndOf="@id/ivmyinteraste"
                     android:layout_marginLeft="12dp"
-                    android:layout_centerVertical="true"
                     android:textStyle="bold"/>
 
                 <ImageView
@@ -143,36 +146,38 @@
                 android:id="@+id/GenralkCategorie"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:text="General"
+                android:gravity=""
                 android:textStyle="bold"
+                android:textColor="@color/primary_dark"
                 android:layout_marginLeft="12dp"
                 />
             <RelativeLayout
                 android:layout_marginTop="12dp"
                 android:layout_marginLeft="12dp"
-                android:id="@+id/relative3"
+                android:id="@+id/relative_settings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/settings"
                     android:id="@+id/ivsettings"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="My Interaste"
+                    android:text="Settings"
                     android:layout_toEndOf="@id/ivsettings"
                     android:layout_marginLeft="12dp"
-                    android:layout_centerVertical="true"
                     android:textStyle="bold"/>
 
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    android:id="@+id/iv_settings"
                     android:src="@drawable/right_arrow"
                     android:layout_alignParentEnd="true"
                     />
@@ -186,9 +191,9 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/onlinestate"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/showonlinestatus"
                     android:id="@+id/ivshowOnlineStatus"
                     />
                 <TextView
@@ -197,7 +202,6 @@
                     android:text="Show Online Status"
                     android:layout_toEndOf="@id/ivshowOnlineStatus"
                     android:layout_marginLeft="12dp"
-                    android:layout_centerVertical="true"
                     android:textStyle="bold"/>
 
                 <Switch
@@ -216,8 +220,8 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/payment"
                     android:id="@+id/ivpayment"
                     />
@@ -227,7 +231,6 @@
                     android:text="Payment"
                     android:layout_toEndOf="@id/ivpayment"
                     android:layout_marginLeft="12dp"
-                    android:layout_centerVertical="true"
                     android:textStyle="bold"/>
 
                 <ImageView
@@ -238,36 +241,7 @@
                     />
 
             </RelativeLayout>
-            <RelativeLayout
-                android:layout_marginTop="12dp"
-                android:layout_marginLeft="12dp"
-                android:id="@+id/relative6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/invite"
-                    android:id="@+id/ivinviteFriends"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Invite Friends"
-                    android:layout_toEndOf="@id/ivinviteFriends"
-                    android:layout_marginLeft="12dp"
-                    android:layout_centerVertical="true"
-                    android:textStyle="bold"/>
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/right_arrow"
-                    android:layout_alignParentEnd="true"
-                    />
-
-            </RelativeLayout>
             <RelativeLayout
                 android:layout_marginTop="12dp"
                 android:layout_marginLeft="12dp"
@@ -276,9 +250,9 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/becomaseller"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/becomeaseller"
                     android:id="@+id/ivBecomeSeller"
                     />
                 <TextView
@@ -287,7 +261,6 @@
                     android:text="Become a Seller"
                     android:layout_toEndOf="@id/ivBecomeSeller"
                     android:layout_marginLeft="12dp"
-                    android:layout_centerVertical="true"
                     android:textStyle="bold"/>
 
                 <ImageView
@@ -301,23 +274,22 @@
             <RelativeLayout
                 android:layout_marginTop="12dp"
                 android:layout_marginLeft="12dp"
-                android:id="@+id/relative8"
+                android:id="@+id/btnJob"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/support"
                     android:id="@+id/ivsupport"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Support"
+                    android:text="Job"
                     android:layout_toEndOf="@id/ivsupport"
                     android:layout_marginLeft="12dp"
-                    android:layout_centerVertical="true"
                     android:textStyle="bold"/>
 
                 <ImageView
